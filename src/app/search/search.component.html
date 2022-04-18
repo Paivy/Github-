@@ -1,9 +1,33 @@
-<form class="d-flex">
-        <input
-          class="form-control me-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+<form (ngSubmit)="getUsername(userInput)" class="d-flex">
+  <input
+    name="userInput"
+    [(ngModel)]="userInput"
+    class="form-control me-2"
+    type="search"
+    placeholder="Post"
+    aria-label="Search"
+  />
+  <button
+    [disabled]="userInput.length == 0"
+    class="btn btn-outline-success"
+    type="submit"
+  >
+    Search
+  </button>
+</form>
+<div class="container" *ngIf="user">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title">{{ user.login }}</div>
+        </div>
+        <div class="card-text">
+          <p>followers: {{ user.followers }}</p>
+          <p>following: {{ user.following }}</p>
+         <a href="{{ user.html_url }}" target="_blank">githuburl</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
