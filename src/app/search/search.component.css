@@ -13,8 +13,16 @@ form button {
   margin-top: 230px;
   /* margin-left: 60px; */
   border-color: rgb(243, 141, 8);
+  background-color: rgb(52, 167, 52);
+  color: white;
 }
 
 form{
   margin-left: 430px;
+}
+.container .card{
+  background-color:rgb(231, 227, 227);
+  opacity: 0.6;
+  
+
 }
