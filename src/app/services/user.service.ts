@@ -12,7 +12,9 @@ export class UserService {
     const promise = this.http.get(
       `${environment.githubapiurl}/users/${userName}`
     );
-    return await lastValueFrom(promise).then((result) => result).catch((error)=> console.log(error))
+    return await lastValueFrom(promise)
+      .then((result) => result)
+      .catch((error) => console.log(error));
   }
   // https://api.github.com/users/Paivy
 }
