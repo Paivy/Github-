@@ -1,4 +1,4 @@
-<form (ngSubmit)="getUsername(userInput)" class="d-flex">
+<form (ngSubmit)="getUsername(userInput)" class="d-flex" id="formy">
   <input
     name="userInput"
     [(ngModel)]="userInput"
@@ -8,6 +8,7 @@
     aria-label="Search"
   />
   <button
+    id="click"
     [disabled]="userInput.length == 0"
     class="btn btn-outline-success"
     type="submit"
@@ -25,7 +26,8 @@
         <div class="card-text">
           <p>followers: {{ user.followers }}</p>
           <p>following: {{ user.following }}</p>
-         <a href="{{ user.html_url }}" target="_blank">githuburl</a>
+
+          <a href="{{ user.html_url }}" target="_blank">githuburl</a>
         </div>
       </div>
     </div>
