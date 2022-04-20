@@ -4,7 +4,6 @@ form input {
   /* margin-left: 50px; */
   border-color: rgb(243, 141, 8);
   border: 100%;
- 
 }
 
 form button {
@@ -17,12 +16,15 @@ form button {
   color: white;
 }
 
-form{
+form {
   margin-left: 430px;
 }
-.container .card{
-  background-color:rgb(231, 227, 227);
+.container .card {
+  background-color: rgb(231, 227, 227);
   opacity: 0.6;
-  
-
+  margin-left: 250px;
+  font-weight: 700;
 }
+/* .container.image {
+  border-radius: 250px;
+} */
